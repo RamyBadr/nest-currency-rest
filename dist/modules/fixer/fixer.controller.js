@@ -88,8 +88,8 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], FixerController.prototype, "convert", null);
 FixerController = __decorate([
-    common_1.Controller('fixer'),
-    swagger_1.ApiUseTags('fixer'),
+    common_1.Controller('currency'),
+    swagger_1.ApiUseTags('currency'),
     __metadata("design:paramtypes", [fixer_service_1.FixerService])
 ], FixerController);
 exports.FixerController = FixerController;
