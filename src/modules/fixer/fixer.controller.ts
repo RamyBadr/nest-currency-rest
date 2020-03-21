@@ -32,8 +32,8 @@ import {
     ConvertOptionsDto,
 } from './dto/currency-page-options.dto';
 
-@Controller('fixer')
-@ApiUseTags('fixer')
+@Controller('currency')
+@ApiUseTags('currency')
 // @UseGuards(AuthGuard, RolesGuard)
 // @UseInterceptors(AuthUserInterceptor)
 // @ApiBearerAuth()
