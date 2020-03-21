@@ -21,7 +21,7 @@ export class MathController {
 
     @MessagePattern({ cmd: 'hello' })
     hello(): string {
-        return 'hello world';
+        return 'hello world!!';
     }
 
     // sum(data: number[]): number {

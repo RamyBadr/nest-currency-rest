@@ -50,8 +50,7 @@ export class UserController {
         @Query(new ValidationPipe({ transform: true }))
         pageOptionsDto: UsersPageOptionsDto,
     ): Promise<UsersPageDto> {
-        console.log(pageOptionsDto, 'pageOptionsDto passed');
-
+        // console.log(pageOptionsDto, 'pageOptionsDto passed');
         return this._userService.getUsers(pageOptionsDto);
     }
 }
