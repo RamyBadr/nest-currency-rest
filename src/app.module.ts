@@ -10,25 +10,30 @@ import { UserModule } from './modules/user/user.module';
 import { ConfigService } from './shared/services/config.service';
 import { SharedModule } from './shared/shared.module';
 import { FixerModule } from './modules/fixer/fixer.module';
-// import { QuizModule } from './modules/quiz/quiz.module';
-// import { QuestionModule } from './modules/question/question.module';
-// import { AnswerModule } from './modules/answer/answer.module';
+import { FixerGraphModule } from './modules/fixerGraph/fixer.graph.module';
+import { GraphQLModule } from '@nestjs/graphql';
 
 @Module({
     imports: [
-        MathModule,
-        AuthModule,
-        UserModule,
+        SharedModule,
         FixerModule,
-        // QuizModule,
-        // QuestionModule,
-        // AnswerModule,
-        TypeOrmModule.forRootAsync({
-            imports: [SharedModule],
-            useFactory: (configService: ConfigService) =>
-                configService.typeOrmConfig,
-            inject: [ConfigService],
-        }),
+        // FixerGraphModule,
+        // GraphQLModule.forRootAsync({
+        //     useFactory: () => ({
+        //         autoSchemaFile: 'schema.gql',
+        //         include: [FixerGraphModule],
+        //     }),
+        // }),
+
+        // MathModule,
+        // AuthModule,
+        // UserModule,
+        // TypeOrmModule.forRootAsync({
+        //     imports: [SharedModule],
+        //     useFactory: (configService: ConfigService) =>
+        //         configService.typeOrmConfig,
+        //     inject: [ConfigService],
+        // }),
     ],
 })
 export class AppModule implements NestModule {

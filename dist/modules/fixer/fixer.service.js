@@ -25,9 +25,33 @@ let FixerService = class FixerService {
         this.httpService = httpService;
         this.configService = configService;
     }
-    getLatest() {
+    getLatest(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.httpService.get(this.configService.fixerLatestUrl);
+            return this.httpService
+                .get(this.configService.fixerBaseUrl + '/latest', {
+                params: Object.assign({ access_key: this.configService.fixerApiKey }, params),
+            })
+                .toPromise();
+        });
+    }
+    convert(params) {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.httpService
+                .get(this.configService.fixerBaseUrl + '/convert', {
+                params: Object.assign({ access_key: this.configService.fixerApiKey }, params),
+            })
+                .toPromise();
+        });
+    }
+    getSymbols() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.httpService
+                .get(this.configService.fixerBaseUrl + '/symbols', {
+                params: {
+                    access_key: this.configService.fixerApiKey,
+                },
+            })
+                .toPromise();
         });
     }
 };

@@ -9,23 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const PageOptionsDto_1 = require("../../../common/dto/PageOptionsDto");
 const class_validator_1 = require("class-validator");
 const swagger_1 = require("@nestjs/swagger");
-class CurrencyPageOptionsDto extends PageOptionsDto_1.PageOptionsDto {
+class LatestOptionsDto {
 }
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.IsUUID(),
-    class_validator_1.IsNotEmpty(),
-    swagger_1.ApiModelProperty({ required: false }),
-    __metadata("design:type", Array)
-], CurrencyPageOptionsDto.prototype, "symbols", void 0);
-__decorate([
-    class_validator_1.IsBooleanString(),
-    class_validator_1.IsOptional(),
-    swagger_1.ApiModelProperty({ required: false, type: Boolean }),
+    class_validator_1.IsString({ each: true }),
+    swagger_1.ApiModelProperty({ required: false, type: String, default: 'USD,CAD,JPY' }),
     __metadata("design:type", String)
-], CurrencyPageOptionsDto.prototype, "base", void 0);
-exports.CurrencyPageOptionsDto = CurrencyPageOptionsDto;
+], LatestOptionsDto.prototype, "symbols", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    swagger_1.ApiModelProperty({ required: false, type: String, default: 'EUR' }),
+    __metadata("design:type", String)
+], LatestOptionsDto.prototype, "base", void 0);
+exports.LatestOptionsDto = LatestOptionsDto;
+class ConvertOptionsDto {
+}
+__decorate([
+    class_validator_1.IsString({ each: true }),
+    swagger_1.ApiModelProperty({ required: true, type: String, default: 'EUR' }),
+    __metadata("design:type", String)
+], ConvertOptionsDto.prototype, "from", void 0);
+__decorate([
+    class_validator_1.IsString(),
+    swagger_1.ApiModelProperty({ required: true, type: String, default: 'USD' }),
+    __metadata("design:type", String)
+], ConvertOptionsDto.prototype, "to", void 0);
+__decorate([
+    class_validator_1.IsNumberString(),
+    swagger_1.ApiModelProperty({ required: true, type: String, default: '0' }),
+    __metadata("design:type", String)
+], ConvertOptionsDto.prototype, "amount", void 0);
+exports.ConvertOptionsDto = ConvertOptionsDto;
 //# sourceMappingURL=currency-page-options.dto.js.map

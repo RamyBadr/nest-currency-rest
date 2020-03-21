@@ -36,12 +36,6 @@ export class ConfigService {
     get fixerBaseUrl(): string {
         return this.get('FIXER_BASE_URL') || 'http://data.fixer.io/api/';
     }
-    get fixerLatestUrl(): string {
-        return (
-            this.get('FIXER_LATEST_URL') ||
-            'http://data.fixer.io/api/latest?access_key=cfc01fee5fb5f5b31dad7585125ef7d4&format=1'
-        );
-    }
 
     get typeOrmConfig(): TypeOrmModuleOptions {
         let entities = [__dirname + '/../../modules/**/*.entity{.ts,.js}'];

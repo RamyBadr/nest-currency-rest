@@ -43,7 +43,6 @@ let UserController = class UserController {
         });
     }
     getUsers(pageOptionsDto) {
-        console.log(pageOptionsDto, 'pageOptionsDto passed');
         return this._userService.getUsers(pageOptionsDto);
     }
 };

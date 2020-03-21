@@ -17,11 +17,11 @@ import { ApiModelProperty } from '@nestjs/swagger';
 export class LatestOptionsDto {
     @IsString({ each: true })
     @ApiModelProperty({ required: false, type: String, default: 'USD,CAD,JPY' })
-    symbols: string;
+    symbols?: string;
 
     @IsString()
     @ApiModelProperty({ required: false, type: String, default: 'EUR' })
-    base: string;
+    base?: string;
 }
 export class ConvertOptionsDto {
     @IsString({ each: true })
