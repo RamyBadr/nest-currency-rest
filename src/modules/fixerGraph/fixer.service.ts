@@ -23,13 +23,13 @@ export class FixerService {
         return result.data as CurrencyRateResponse;
     }
 
-    async getSymbols(): Promise<any> {
-        return this.httpService
-            .get(this.configService.fixerBaseUrl + '/symbols', {
-                params: {
-                    access_key: this.configService.fixerApiKey,
-                },
-            })
-            .toPromise();
-    }
+    // async getSymbols(): Promise<any> {
+    //     return this.httpService
+    //         .get(this.configService.fixerBaseUrl + '/symbols', {
+    //             params: {
+    //                 access_key: this.configService.fixerApiKey,
+    //             },
+    //         })
+    //         .toPromise();
+    // }
 }

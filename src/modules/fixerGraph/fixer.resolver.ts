@@ -11,7 +11,8 @@ import {
 
 import {
     CurrencyRateResponse,
-    CurrencyRate,
+    TestType,
+    // CurrencyRate,
 } from './models/currencyRate.model';
 import { LatestOptionsArgs } from './dto/currencyRate.args';
 import { FixerService } from './fixer.service';
@@ -19,13 +20,22 @@ import { FixerService } from './fixer.service';
 import { Any } from 'typeorm';
 import { Args, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
 
-@Resolver(of => CurrencyRateResponse)
+@Resolver()
 export class RatesResolver {
     constructor(private readonly fixerService: FixerService) {}
-    @Query(returns => CurrencyRateResponse)
-    async getLatest(
-        @Args() latestOptionsArgs: LatestOptionsArgs,
-    ): Promise<CurrencyRateResponse> {
-        return await this.fixerService.getLatest(latestOptionsArgs);
+    @Query(() => TestType)
+    async getLatest(): Promise<TestType> {
+        const result = await this.fixerService.getLatest();
+        console.log(result);
+        return {
+            // success: true,
+            // timestamp: 1,
+            // base: 'USD',
+            test: 'test',
+        };
+    }
+    @Query(() => String)
+    hello() {
+        return 'hello graphql';
     }
 }

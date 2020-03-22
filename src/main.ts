@@ -20,6 +20,7 @@ import { QueryFailedFilter } from './filters/query-failed.filter';
 import { ConfigService } from './shared/services/config.service';
 import { SharedModule } from './shared/shared.module';
 import { setupSwagger } from './viveo-swagger';
+import { AxiosErrorFilter } from './filters/axios-failed.filter';
 
 async function bootstrap() {
     initializeTransactionalContext();
@@ -45,6 +46,7 @@ async function bootstrap() {
     app.useGlobalFilters(
         new HttpExceptionFilter(reflector),
         new QueryFailedFilter(reflector),
+        new AxiosErrorFilter(reflector),
     );
 
     app.useGlobalInterceptors(new ClassSerializerInterceptor(reflector));

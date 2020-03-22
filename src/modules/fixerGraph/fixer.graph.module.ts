@@ -6,7 +6,6 @@ import { FixerService } from './fixer.service';
 
 @Module({
     imports: [HttpModule],
-    // controllers: [FixerController],
-    providers: [RatesResolver, FixerService, DateScalar],
+    providers: [RatesResolver, FixerService],
 })
 export class FixerGraphModule {}

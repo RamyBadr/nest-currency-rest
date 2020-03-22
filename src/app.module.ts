@@ -17,13 +17,16 @@ import { GraphQLModule } from '@nestjs/graphql';
     imports: [
         SharedModule,
         FixerModule,
-        // FixerGraphModule,
+        FixerGraphModule,
         // GraphQLModule.forRootAsync({
         //     useFactory: () => ({
         //         autoSchemaFile: 'schema.gql',
         //         include: [FixerGraphModule],
         //     }),
         // }),
+        GraphQLModule.forRoot({
+            autoSchemaFile: 'schema.gql',
+        }),
 
         // MathModule,
         // AuthModule,
