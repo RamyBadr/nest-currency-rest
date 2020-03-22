@@ -1,7 +1,7 @@
 {
-    "name": "quiez-nest-boilerplate",
+    "name": "nest-currency-rest",
     "version": "0.0.1",
-    "description": "Awesome NestJS Boilerplate, Typescript, Postgres, TypeORM",
+    "description": "REST Api calling currency conversion api",
     "author": "Ramy Badr <eng.ramybadr66@gmail.com>",
     "license": "MIT",
     "scripts": {
