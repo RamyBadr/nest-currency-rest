@@ -1,56 +1,52 @@
-# Nest Quiz App sample
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
 
-> This is an ever-evolving, very opinionated architecture and dev environment for new node projects using [NestJS](https://nestjs.com). Questions, feedback, and for now, even bikeshedding are welcome. 😄
+[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
+[travis-url]: https://travis-ci.org/nestjs/nest
+[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
+[linux-url]: https://travis-ci.org/nestjs/nest
 
-## Getting started
+  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+
+## Description
+
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+## Installation
 
 ```bash
-# 1. Clone the repository or click on "Use this template" button.
-git clone https://github.com/NarHakobyan/awesome-nest-boilerplate.git my-new-project
-
-# 2. Enter your newly-cloned folder.
-cd my-new-project
-
-# 3. Install dependencies. (Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install)
-yarn
-
-# 4. Run development server and open http://localhost:3000
-yarn start:dev
-
-# 5. Read the documentation linked below for "Setup and development".
+$ npm install
 ```
 
-## Features
+## Running the app
 
-<dl>
-  <dt><b>Quick scaffolding</b></dt>
-  <dd>Create modules, services, controller - right from the CLI!</dd>
+```bash
+# development
+$ npm run start
 
-  <dt><b>Instant feedback</b></dt>
-  <dd>Enjoy the best DX (Developer eXperience) and code your app at the speed of thought! Your saved changes are reflected instantaneously.</dd>
+# watch mode
+$ npm run start:dev
 
-  <dt><b>JWT Authentication</b></dt>
-  <dd>Installed and configured JWT authentication.</dd>
+```
 
-  <dt><b>Next generation Typescript</b></dt>
-  <dd>Always up to date typescript version.</dd>
+## Test
 
-  <dt><b>Industry-standard routing</b></dt>
-  <dd>It's natural to want to add pages (e.g. /about`) to your application, and routing makes this possible.</dd>
+```bash
+# unit tests
+$ npm run test
 
-  <dt><b>Environment Configuration</b></dt>
-  <dd>development, staging and production environment configurations</dd>
+# e2e tests
+$ npm run test:e2e
 
-  <dt><b>Swagger Api Documentation</b></dt>
-  <dd>Already integrated API documentation. To see all available endpoints visit http://localhost:3000/documentation</dd>
+# test coverage
+$ npm run test:cov
+```
 
-  <dt><b>Linter</b></dt>  
-  <dd>tslint + eslint + prettier = ❤️</dd>
-</dl>
+## Support
 
-## Documentation
+Nest is an MIT-licensed open source project.
 
-This project includes a `docs` folder with more details on:
+## License
 
-1.  [Setup and development](https://narhakobyan.github.io/awesome-nest-boilerplate/docs/development.html#first-time-setup)
-1.  [Architecture](https://narhakobyan.github.io/awesome-nest-boilerplate/docs/architecture.html)
+Nest is [MIT licensed](LICENSE).
